@@ -1,8 +1,15 @@
 module.exports = {
   development: {
-    // complete your knexfile
-    migrations: {
-      directory: "./data/migrations",
-    },
+      client: 'sqlite3',
+      useNullAsDefault: true, // needed for sqlite
+      connection: {
+        filename: './data/test.db3',
+      },
+      migrations: {
+        directory: './data/migrations'
+      },
+      seeds: {
+        directory: './data/seeds'
+      },
   },
 };
